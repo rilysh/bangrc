@@ -10,6 +10,6 @@ You can load these scripts via running `source [script_name]` or you can add the
 ```
 
 ### Note
-In `math.bash` not all functions are "accurate". If you find any issue, please report it. In calculation, `bash` has it's own limitations.
-Bash's limitation, that can only represent largesst signed 32-bit integer. `bc` on the other hand, can't perform floating point arithmetic.
-Please avoid using computed results on a critical area.
+In `math.bash` not all functions are "accurate". In calculation, `bash` has it's own limitations. Bash can't represent larger value than
+signed 32-bit integer. `bc` on the other hand, can't perform floating point arithmetic. `log(...)` varient functions in `math.bash` are inaccurate
+and rely on approximation. Please avoid using computed results on a critical area except just for the idea.

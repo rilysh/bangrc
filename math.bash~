@@ -136,8 +136,7 @@ function ln() {
 function log() {
     __has_command "bc" && return 1
     __has_args "$1" && return 1
-    __has_args "$2" && return 1
-    printf "%.16f\n" "$(echo "l($2) / l($1)" | bc -l)"
+    printf "%.16f\n" "$(echo "l(10) / l($1)" | bc -l)"
 }
 
 #* Calculate common (base 2) logarithm
@@ -174,7 +173,7 @@ function pow() {
 function exp() {
     __has_command "bc" && return 1
     __has_args "$1" && return 1
-    printf "%.18f\n" "$(echo "e($1)" | bc -l)"
+    printf ".18f\n" "$(echo "e($1)" | bc -l)"
 }
 
 #* Calculate exponential value with base 2
